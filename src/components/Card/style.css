@@ -1,0 +1,157 @@
+.card {
+  margin-left: 10%;
+  background-color: rgb(9, 16, 36);
+  transition: 0.1s;
+  margin-top: 20px;
+  box-shadow: 1px 4px 10px -6px;
+  padding: 0px;
+  height: 480px;
+  width: 260px;
+  /*border-radius: 10px;*/
+}
+.card:active {
+  transition: 0.1s;
+  opacity: 0.8;
+}
+
+.card-title {
+  color: white;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.game-image img {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 260px;
+  height: 320px;
+}
+
+.card-badge-title {
+  z-index: 1;
+  text-align: center;
+  margin-left: 9px;
+  height: 10px;
+  width: 37%;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.card-badge {
+  padding: 1px 1px 1px 3px;
+  position: relative;
+  border-radius: 12px;
+  height: 17px;
+  background-color: black;
+  z-index: 2;
+  font-size: 14px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.product-price {
+  padding: 16px;
+  margin-top: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(34, 250, 34);
+  font-weight: bolder;
+  font-size: 22px;
+  width: 190px;
+}
+
+.product-state {
+  position: absolute;
+  margin-left: 115px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(0, 204, 255);
+  text-align: center;
+}
+
+@media screen and (max-width: 866px) {
+  .card {
+    margin-left: 10%;
+    background-color: rgb(9, 16, 36);
+    transition: 0.1s;
+    margin-top: 20px;
+    box-shadow: 1px 4px 10px -6px;
+    padding: 6px;
+    height: 150px;
+    width: 106vw;
+    /*border-radius: 10px;*/
+  }
+  .card:active {
+    transition: 0.1s;
+    opacity: 0.8;
+  }
+
+  .card-title {
+    position: relative;
+    text-align: left;
+    left: 119px;
+    bottom: 150px;
+    width: 210px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .game-image img {
+    display: inline-block;
+    width: 120px;
+    height: 150px;
+  }
+
+  .card-badge-title {
+    z-index: 1;
+    text-align: center;
+    margin-left: 9px;
+    height: 10px;
+    width: 30%;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+
+  .card-badge {
+    position: relative;
+    left: 120px;
+    bottom: 170px;
+    padding: 1px 1px 1px 3px;
+    position: relative;
+    border-radius: 12px;
+    height: 17px;
+    background-color: black;
+    z-index: 2;
+    font-size: 14px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  .product-state {
+    position: relative;
+    margin-left: 130px;
+    bottom: 120px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    color: rgb(0, 204, 255);
+    text-align: left;
+  }
+
+  .product-price {
+    position: relative;
+    left: 120px;
+    bottom: 145px;
+    padding: 16px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    color: rgb(34, 250, 34);
+    font-weight: bolder;
+    font-size: 22px;
+    width: 190px;
+  }
+}

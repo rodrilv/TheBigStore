@@ -1,0 +1,25 @@
+.grid {
+  background-color: rgb(20, 33, 71);
+  padding: 1%;
+  display: grid;
+  grid-template-columns: 25% 25% 27% 10%;
+}
+
+@media screen and (max-width: 1115px) {
+  .grid {
+    background-color: rgb(20, 33, 71);
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+@media screen and (max-width: 866px) {
+  .grid {
+    background-color: rgb(20, 33, 71);
+    padding: 0%;
+    margin-right: 100%;
+    display: grid;
+    grid-template-columns: 33%;
+  }
+}
