@@ -69,13 +69,13 @@ a:hover {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     position: absolute;
-    left: 9%;
+    left: 1%;
     top: 100px;
     margin-bottom: 100%;
   }
 
   .search-bar {
-    width: 86%;
+    width: 74%;
     height: 40px;
     position: absolute;
     top: 25px;

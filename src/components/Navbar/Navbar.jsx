@@ -19,6 +19,7 @@ export default function Navbar() {
     <div className="navbar">
       <input
         className="search-bar"
+        placeholder="Buscar por título"
         type="search"
         onChange={(e) => setSearch(e.target.value)}
         onKeyDown={handleKeyDown}

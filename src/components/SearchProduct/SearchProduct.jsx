@@ -12,7 +12,7 @@ export default function SearchProduct() {
   useEffect(() => {
     setSearchedGames(
       videogames.filter((game) =>
-        game.title.toLowerCase().includes(params.title)
+        game.title.toLowerCase().includes(params.title.toLocaleLowerCase())
       )
     );
   }, [params.title]);

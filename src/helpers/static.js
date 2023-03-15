@@ -1,6 +1,6 @@
 export const videogames = [
   {
-    title: "Resident Evil 4: Remake",
+    title: "Resident Evil 4 Remake",
     platform: "XBSX|S",
     state: "Nuevo",
     price: "$1,359.00 MXN",
@@ -36,7 +36,7 @@ export const videogames = [
   },
   {
     title: "Metal Gear Solid: HD Collection",
-    platform: "X360/One",
+    platform: "X360",
     state: "Excelente Estado",
     price: "$450.00 MXN",
     image: "https://m.media-amazon.com/images/I/81dW0SiAn1L._AC_SY679_.jpg",
@@ -95,5 +95,51 @@ export const videogames = [
     state: "Buen Estado",
     price: "$350.00 MXN",
     image: "https://m.media-amazon.com/images/I/71fkpE-R+QL._AC_SX522_.jpg",
+  },
+
+  {
+    title: "Resident Evil 4 Remake",
+    platform: "PS4/PS5",
+    state: "Buen Estado",
+    price: "$1,400.00 MXN",
+    image: "https://m.media-amazon.com/images/I/71DuN2jmNXL._AC_SX679_.jpg",
+  },
+
+  {
+    title: "Resident Evil 2 Remake",
+    platform: "PS4",
+    state: "Nuevo",
+    price: "$399.00 MXN",
+    image: "https://m.media-amazon.com/images/I/61OJdq6GT4L._AC_SL1024_.jpg",
+  },
+
+  {
+    title: "Metal Gear Solid 4",
+    platform: "PS3",
+    state: "Usado",
+    price: "$299.00 MXN",
+    image: "https://m.media-amazon.com/images/I/81x2NRHcO5L._AC_SL1500_.jpg",
+  },
+
+  {
+    title: "Fallout 4 G.O.T.Y Edition",
+    platform: "PS4",
+    state: "Buen estado",
+    price: "$350.00 MXN",
+    image: "https://m.media-amazon.com/images/I/919G-Mf0mWL._AC_SX522_.jpg",
+  },
+  {
+    title: "SPIDER-MAN Miles Morales",
+    platform: "PS4",
+    state: "Excelente estado",
+    price: "$650.00 MXN",
+    image: "https://m.media-amazon.com/images/I/51bGwgA5ypS._AC_.jpg",
+  },
+  {
+    title: "Ghost of Tsushima: Director's Cut",
+    platform: "PS4",
+    state: "Nuevo",
+    price: "$699.00 MXN",
+    image: "https://m.media-amazon.com/images/I/81XZxG50fQL._AC_SX679_.jpg",
   },
 ];
