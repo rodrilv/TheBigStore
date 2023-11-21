@@ -13,22 +13,8 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Home />
-            </>
-          }
-        />
-        <Route
-          path="/search/:title"
-          element={
-            <>
-              <SearchProduct />
-            </>
-          }
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/search/:title" element={<SearchProduct />} />
       </Routes>
     </Router>
   );

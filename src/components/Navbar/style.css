@@ -1,87 +1,92 @@
-input {
-  background-image: url("../../assets/search-outline.svg");
-  background-size: 28px 28px;
-  background-repeat: no-repeat;
-  background-position: 20px;
-  transition: 0.1s;
-  border: none;
-  outline: none;
-}
-
-input:focus {
-  transition: 0.1s;
-  outline: 2px solid rgba(6, 209, 255, 0.827);
-}
-
-.navbar {
-  background-color: rgb(20, 33, 71);
-  height: 80px;
-  width: 100%;
-}
-
-.search-bar {
-  width: 30%;
-  height: 40px;
-  position: absolute;
-  top: 25px;
-  margin-left: 10%;
-  border-radius: 40px;
-  text-indent: 55px;
-  font-size: large;
+.navbar{
+  display: flex;
+  flex-direction: row;
 }
 
 .menu {
-  color: aliceblue;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  position: absolute;
-  left: 50%;
-  top: 4.7%;
+  margin-top: 25px;
 }
 
-a {
+.search{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  width: 80%;
+  border: solid #384157;
+}
+
+.search-bar{
+  height: 40px;
+  color: white;
+  border: none;
+  outline: none;
+  background-color: #142147;
+  font-family: Unispace;
+  font-size: 20px;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.menu-item{
+  font-size: 18px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-decoration: none;
   font-weight: bolder;
   padding: 10px;
-  border-bottom: 3px solid rgb(110, 110, 255);
-  margin-left: 35px;
 }
 
-a:link,
-a:visited {
+.menu-item:link,
+.menu-item:visited {
   color: white;
 }
 
-a:hover {
-  border-bottom: 3px solid rgb(171, 171, 255);
+.menu-item:hover{
+  border-bottom: 3px solid rgb(171, 171, 255)
+}
+
+.text-logo {
+  margin-top: -9px;
+  animation: flicker 1.5s infinite alternate;
+  font-family: "Unispace";
+  color: #fff;
+  text-align: center
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      /*0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,*/
+      0 0 150px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
 }
 
 @media screen and (max-width: 866px) {
-  .navbar {
-    background-color: rgb(20, 33, 71);
-    height: 80px;
-    width: 100%;
-    margin-bottom: 60px;
+  .navbar{
+    display: flex;
+    flex-direction: column;
   }
+}
 
-  .menu {
-    color: aliceblue;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    position: absolute;
-    left: 1%;
-    top: 100px;
-    margin-bottom: 100%;
-  }
-
-  .search-bar {
-    width: 74%;
-    height: 40px;
-    position: absolute;
-    top: 25px;
-    margin-left: 10%;
-    border-radius: 40px;
-    text-indent: 55px;
-    font-size: large;
-  }
+@font-face {
+  font-family: 'Unispace';
+  src: url('../../assets/unispacerg.otf');
 }
