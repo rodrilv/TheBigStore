@@ -1,10 +1,11 @@
 export const videogames = [
   {
     title: "Resident Evil 4 Remake",
-    platform: "XBSX|S",
+    platform: "Xbox Series X",
     state: "Nuevo",
     price: "$1,359.00 MXN",
     image: "https://m.media-amazon.com/images/I/71ySSLOAIWL._AC_SX679_.jpg",
+    tags: ["xbox", "action", "horror"],
   },
   {
     title: "Death Stranding: Director's Cut",
@@ -12,13 +13,15 @@ export const videogames = [
     state: "Buen Estado",
     price: "$999.00 MXN",
     image: "https://m.media-amazon.com/images/I/819XulxbTLL._AC_SX679_.jpg",
+    tags: ["playstation", "action"],
   },
   {
     title: "Metal Gear Solid V: The Phantom Pain",
-    platform: "PS4/PS5",
+    platform: "PS4",
     state: "Nuevo",
     price: "$450.00 MXN",
     image: "https://m.media-amazon.com/images/I/71g-D5+zASL._AC_SX569_.jpg",
+    tags: ["playstation", "shooter", "third-person"],
   },
   {
     title: "ALICE",
@@ -26,6 +29,7 @@ export const videogames = [
     state: "Nuevo",
     price: "$500.00 MXN",
     image: "https://m.media-amazon.com/images/I/71kl0mptstL._AC_SY679_.jpg",
+    tags: ["xbox", "hack-and-slash", "third-person"],
   },
   {
     title: "Catherine",
@@ -33,25 +37,28 @@ export const videogames = [
     state: "Usado",
     price: "$600.00 MXN",
     image: "https://m.media-amazon.com/images/I/81KoJIz7HyL._AC_SX569_.jpg",
+    tags: ["playstation", "puzzle", "anime", "platform"],
   },
   {
     title: "Metal Gear Solid: HD Collection",
-    platform: "X360",
+    platform: "Xbox 360",
     state: "Excelente Estado",
     price: "$450.00 MXN",
     image: "https://m.media-amazon.com/images/I/81dW0SiAn1L._AC_SY679_.jpg",
+    tags: ["xbox", "action", "shooter", "third-person"],
   },
 
   {
     title: "Bloodborne",
-    platform: "PS4/PS5",
+    platform: "PS4",
     state: "Nuevo",
     price: "$750.00 MXN",
     image: "https://m.media-amazon.com/images/I/81iItFYPNEL._AC_SX679_.jpg",
+    tags: ["playstation", "rpg", "action-rpg", "souls-born-ring"],
   },
   {
     title: "The Last of Us Part II",
-    platform: "PS4/PS5",
+    platform: "PS4",
     state: "Nuevo",
     price: "$550.00 MXN",
     image:
@@ -68,7 +75,7 @@ export const videogames = [
 
   {
     title: "Assassin's Creed: Odyssey",
-    platform: "XB1",
+    platform: "Xbox One",
     state: "Buen Estado",
     price: "$350.00 MXN",
     image: "https://m.media-amazon.com/images/I/81TQ6UHi1FL._AC_SX522_.jpg",
@@ -83,7 +90,7 @@ export const videogames = [
   },
   {
     title: "Lollipop Chainsaw",
-    platform: "X360",
+    platform: "Xbox 360",
     state: "Buen Estado",
     price: "$650.00 MXN",
     image: "https://m.media-amazon.com/images/I/910VEn6vwCL._AC_SY679_.jpg",
@@ -91,7 +98,7 @@ export const videogames = [
 
   {
     title: "Assassin's Creed: Syndicate",
-    platform: "XB1",
+    platform: "Xbox One",
     state: "Buen Estado",
     price: "$350.00 MXN",
     image: "https://m.media-amazon.com/images/I/71fkpE-R+QL._AC_SX522_.jpg",
@@ -99,7 +106,7 @@ export const videogames = [
 
   {
     title: "Resident Evil 4 Remake",
-    platform: "PS4/PS5",
+    platform: "PS4",
     state: "Buen Estado",
     price: "$1,400.00 MXN",
     image: "https://m.media-amazon.com/images/I/71DuN2jmNXL._AC_SX679_.jpg",

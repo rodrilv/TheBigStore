@@ -9,6 +9,10 @@
   width: 260px;
   /*border-radius: 10px;*/
 }
+
+.card:hover {
+  cursor: pointer;
+}
 .card:active {
   transition: 0.1s;
   opacity: 0.8;

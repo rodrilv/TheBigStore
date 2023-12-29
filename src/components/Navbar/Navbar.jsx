@@ -54,33 +54,25 @@ export default function Navbar() {
           style={{
             display: "flex",
             flexDirection: "row",
+
             fontSize: 30,
             color: "white",
           }}
-        >
-          <p>
-            <FaWhatsapp />
-          </p>
-          <p>449-406-8574</p>
-        </div>
+        ></div>
       </div>
 
       <div className="menu">
         <a className="menu-item" href="#">
           <FaPlaystation />
-          PS5
-        </a>
-        <a className="menu-item" href="#">
-          <FaPlaystation />
-          PS4
+          <p>PlayStation</p>
         </a>
         <a className="menu-item" href="#">
           <FaXbox />
-          Xbox
+          <p>Xbox</p>
         </a>
         <a className="menu-item" href="#">
           <SiApplearcade />
-          Retro
+          <p>Retro</p>
         </a>
       </div>
     </>
