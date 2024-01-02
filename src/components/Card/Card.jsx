@@ -1,9 +1,12 @@
 import React from "react";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
-export default function Card({ title, state, platform, price, image }) {
+export default function Card({ id, title, state, platform, price, image }) {
+  const navigate = useNavigate();
+
   return (
-    <div className="card">
+    <div className="card" onClick={() => navigate(`/game/${id}`)}>
       <div className="game-image">
         <img src={image}></img>
       </div>

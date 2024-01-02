@@ -2,28 +2,26 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { FaSearch } from "react-icons/fa";
-import { FaPlaystation } from "react-icons/fa";
-import { FaXbox } from "react-icons/fa";
+import { FaPlaystation, FaXbox } from "react-icons/fa";
 import { SiApplearcade } from "react-icons/si";
-import { FaWhatsapp } from "react-icons/fa";
-
+import { setSearch } from "../../features/searchSlice";
+import { useSelector, useDispatch } from "react-redux";
 export default function Navbar() {
-  const [search, setSearch] = useState("");
+  const { search } = useSelector((state) => state.search);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSearch = (event) => {
+    console.log(search);
     if (event.key === "Enter") {
-      if (!search) {
-        navigate("/");
-      } else {
-        navigate(`/search/${search}`);
-      }
+      if (!search) return;
+      navigate(`/search/${search}`);
     }
   };
 
   return (
     <>
-      <div onClick={() => navigate("/")} className="navbar">
+      <div className="navbar">
         <div className="logo">
           <h1 className="text-logo">R4</h1>
           <h1 className="text-logo">GameStore</h1>
@@ -43,7 +41,13 @@ export default function Navbar() {
             <FaSearch />
           </label>
           <input
-            onChange={({ target }) => setSearch(target.value)}
+            value={search}
+            onChange={(event) => {
+              if (!event.target.value) {
+                navigate("/");
+              }
+              dispatch(setSearch(event.target.value));
+            }}
             onKeyDown={handleSearch}
             className="search-bar"
             placeholder="Buscar por titulo"

@@ -1,0 +1,30 @@
+.sidebar-container{
+    border-radius: 20px;
+    width: 15%;
+    padding: 10px;
+    position: relative;
+    top: 20%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: fixed;
+    color: white;
+    background-color: #100c24;
+}
+
+.sidebar-option {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.sidebar-option:hover{
+    cursor: pointer;
+    background-color: #2f2a49;
+}
+
+.sidebar-option svg {
+    position: relative;
+    top: 10px;
+    font-size: 35px;
+}

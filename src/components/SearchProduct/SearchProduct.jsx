@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { videogames } from "../../helpers/static";
+import Navbar from "../../components/Navbar/Navbar";
 import Card from "../Card/Card";
 import Main from "../Main/Main";
 
@@ -19,6 +20,7 @@ export default function SearchProduct() {
 
   return (
     <div>
+      <Navbar />
       <Main>
         {searchedGames.map((game, index) => {
           return (
