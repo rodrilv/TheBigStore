@@ -1,0 +1,46 @@
+.segment{
+    border-radius: 25px;
+    width: 70%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #100c24;
+}
+
+.segment div p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    width: 40%;
+
+}
+
+.selected-segment {
+    border-bottom: solid 5px #7f73b3;
+}
+
+.segment div {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.segment-1 {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.segment-2{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.segment div:hover {
+    background-color: #332e49;
+}
+
