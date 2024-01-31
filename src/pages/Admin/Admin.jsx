@@ -1,29 +1,25 @@
-import { Navigate } from "react-router-dom";
 import { Sidebar } from "../../components";
-import "./Admin.css";
-import { useState } from "react";
+import "./Admin.scss";
 import "animate.css";
+import { CreateVideogame } from "./components";
+import { useSelector } from "react-redux";
 
-export const Admin = ({ children }) => {
-  const [segment, setSegment] = useState(0);
+export const Admin = () => {
+  const { menu } = useSelector((state) => state.sidebar);
 
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "300px 1200px" }}>
+    <div className="admin-container">
       <div>
         <Sidebar />
       </div>
-      <div className="segment">
-        <div onClick={() => setSegment(0)} className="segment-1">
-          <p className={segment === 0 ? "selected-segment" : ""}>
-            Subir un Videojuego
-          </p>
-        </div>
-        <div onClick={() => setSegment(1)} className="segment-2">
-          <p className={segment === 1 ? "selected-segment" : ""}>
-            Subir una Consola
-          </p>
-        </div>
-      </div>
+
+      {menu === "CreateVideogame" ? (
+        <CreateVideogame />
+      ) : menu === "UpdateVideogame" ? (
+        <></>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

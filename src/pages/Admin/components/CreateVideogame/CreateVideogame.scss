@@ -1,0 +1,55 @@
+.segment-container {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 80px;
+  background-color: #100c24;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.segment-menu {
+  margin-top: 30px;
+  height: auto;
+  width: 80%;
+  background-color: #100c24;
+}
+
+.segment-create-videogame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    color: white;
+  }
+}
+
+.segment-tags {
+  button {
+    border-radius: 0px;
+  }
+}
+
+.segment {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.segment:hover {
+  background-color: #2f2a49;
+}
+
+.segment-selected {
+  border-bottom: solid 5px #584e88;
+}

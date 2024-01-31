@@ -1,4 +1,9 @@
 .sidebar-container {
+  svg {
+    position: relative;
+    top: 10px;
+    font-size: 35px;
+  }
   position: fixed;
   height: 96.5%;
   border-radius: 20px;
@@ -20,10 +25,4 @@
 .sidebar-option:hover {
   cursor: pointer;
   background-color: #2f2a49;
-}
-
-.sidebar-option svg {
-  position: relative;
-  top: 10px;
-  font-size: 35px;
 }
