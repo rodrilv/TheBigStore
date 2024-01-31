@@ -14,7 +14,7 @@ input[type="number"] {
 
 input[type="text"],
 input[type="number"] ::placeholder {
-  color: rgb(171, 170, 170);
+  color: rgb(255, 252, 252);
 }
 
 select {
@@ -23,8 +23,7 @@ select {
     "Lucida Sans", Arial, sans-serif;
   font-size: 18px;
   text-indent: 15px;
-
-  width: 99.4%;
+  width: 99.7%;
   height: 35px;
   background-color: #2f2a49;
   outline: none;
@@ -40,4 +39,5 @@ button {
   border: none;
   color: white;
   background-color: #2f2a49;
+  cursor: pointer;
 }

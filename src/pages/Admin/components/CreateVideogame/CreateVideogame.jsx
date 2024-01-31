@@ -1,7 +1,9 @@
 import { useState } from "react";
-import Placeholder from "../../../../assets/image-placeholder.jpg";
-import "./CreateVideogame.scss";
 import { createVideogame } from "../../services";
+import Placeholder from "../../../../assets/image-placeholder.jpg";
+import { RxCross2 } from "react-icons/rx";
+import { PiKeyReturnBold } from "react-icons/pi";
+import "./CreateVideogame.scss";
 const CreateVideogame = () => {
   const [segment, setSegment] = useState(0);
   const [tag, setTag] = useState("");
@@ -38,6 +40,7 @@ const CreateVideogame = () => {
   const handleCreateVideogame = async () => {
     try {
       const response = await createVideogame(videogame);
+      setVideogame({ ...videogame, tags: [] });
       alert(response.data.message);
     } catch (error) {
       alert("Hubo un error al crear el videojuego");
@@ -59,14 +62,14 @@ const CreateVideogame = () => {
           <p>Subir una Consola</p>
         </div>
       </div>
+
       <div className="segment-menu">
         {segment === 0 ? (
           <div className="segment-create-videogame">
-            <img
-              width={200}
-              height={240}
-              src={videogame.image || Placeholder}
-            />
+            <div>
+              <img src={videogame.image || Placeholder} />
+            </div>
+
             <div>
               <h3>General</h3>
               <input
@@ -128,6 +131,7 @@ const CreateVideogame = () => {
                 placeholder="Solo Disco"
               ></input>
             </div>
+
             <div>
               <h3>Precios</h3>
               <input
@@ -194,24 +198,49 @@ const CreateVideogame = () => {
             </div>
 
             <div className="segment-tags">
-              <h3>Etiquetas</h3>
+              <div>
+                <h3>Etiquetas</h3>
+              </div>
+
+              <div className="tags-container">
+                {videogame &&
+                  videogame.tags.map((tag, index) => {
+                    return (
+                      <div className="tag-item">
+                        <p>{tag}</p>
+                        <RxCross2
+                          onClick={() => {
+                            videogame.tags.splice(index, 1);
+                            setVideogame({ ...videogame });
+                          }}
+                        />
+                      </div>
+                    );
+                  })}
+              </div>
+
               <input
                 value={tag}
-                onChange={({ target: { value } }) => setTag(value)}
+                onKeyDown={({ key }) => {
+                  if (key === "Enter") {
+                    if (tag === "") return;
+                    videogame.tags.push(tag);
+                    setTag("");
+                    setVideogame({ ...videogame });
+                  }
+                }}
+                onChange={({ target: { value } }) => {
+                  if (tag.length > 15) {
+                    setTag(tag.substring(0, tag.length - 1));
+                    return;
+                  }
+                  setTag(value);
+                }}
                 type="text"
               ></input>
-              <button
-                onClick={() => {
-                  if (tag === "") return;
-                  videogame.tags.push(tag);
-                  setTag("");
-                  setVideogame({ ...videogame });
-                }}
-              >
-                Guardar Etiqueta
-              </button>
             </div>
-            <div>
+
+            <div className="segment-save">
               <button onClick={async () => await handleCreateVideogame()}>
                 Guardar
               </button>
