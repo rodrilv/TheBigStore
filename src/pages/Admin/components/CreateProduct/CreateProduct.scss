@@ -1,0 +1,22 @@
+.segment-container {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 80px;
+  background-color: #100c24;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-left: 100px;
+}
+
+.segment-menu {
+  margin-top: 30px;
+  height: auto;
+  width: 80%;
+  background-color: #100c24;
+  margin-left: 100px;
+}

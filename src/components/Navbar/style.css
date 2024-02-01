@@ -47,6 +47,7 @@
   text-decoration: none;
   font-weight: bolder;
   margin-left: 5%;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
 }
 
 .menu-item svg {

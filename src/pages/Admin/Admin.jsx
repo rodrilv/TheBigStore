@@ -4,7 +4,7 @@ import "animate.css";
 import { CreateVideogame } from "./components";
 import { useSelector } from "react-redux";
 
-export const Admin = () => {
+const Admin = () => {
   const { menu } = useSelector((state) => state.sidebar);
 
   return (
@@ -23,3 +23,5 @@ export const Admin = () => {
     </div>
   );
 };
+
+export default Admin;

@@ -5,9 +5,8 @@ import {
   Navigate,
   //Switch,
 } from "react-router-dom";
-import SearchProduct from "./components/SearchProduct/SearchProduct";
-import Home from "./components/Home/Home";
-import { Admin } from "./pages/Admin/Admin";
+
+import { Admin, Home, SearchProduct } from "./pages";
 import "./App.css";
 function App() {
   return (

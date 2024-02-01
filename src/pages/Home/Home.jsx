@@ -1,11 +1,12 @@
 import React from "react";
-import { Card } from "../../components";
+import { Card, Navbar } from "../../components";
 import { Main } from "../";
 import { videogames } from "../../helpers/static";
 
 export default function Home({ prop1, prop2 }) {
   return (
     <div>
+      <Navbar />
       <Main>
         {videogames.map((game, index) => {
           return (

@@ -1,1 +1,1 @@
-export { default as CreateVideogame } from './CreateVideogame/CreateVideogame'
+export { default as CreateVideogame } from "./CreateProduct/CreateProduct";

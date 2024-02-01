@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { videogames } from "../../helpers/static";
 import Navbar from "../../components/Navbar/Navbar";
-import Card from "../Card/Card";
-import Main from "../Main/Main";
+import Card from "../../components/Card/Card";
+import Main from "../../components/Main/Main";
 
 export default function SearchProduct() {
   const [searchedGames, setSearchedGames] = useState([]);

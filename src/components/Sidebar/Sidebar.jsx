@@ -17,7 +17,7 @@ const Sidebar = () => {
             <CiCirclePlus />
           </div>
           <div>
-            <p>Subir un producto</p>
+            <p>Subir un Producto</p>
           </div>
         </div>
         <div

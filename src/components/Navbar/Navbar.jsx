@@ -12,7 +12,6 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const handleSearch = (event) => {
-    console.log(search);
     if (event.key === "Enter") {
       if (!search) return;
       navigate(`/search/${search}`);
@@ -42,11 +41,11 @@ export default function Navbar() {
           </label>
           <input
             value={search}
-            onChange={(event) => {
-              if (!event.target.value) {
+            onChange={({ target: { value } }) => {
+              if (!value) {
                 navigate("/");
               }
-              dispatch(setSearch(event.target.value));
+              dispatch(setSearch(value));
             }}
             onKeyDown={handleSearch}
             className="search-bar"
@@ -76,7 +75,7 @@ export default function Navbar() {
         </a>
         <a className="menu-item" href="#">
           <SiApplearcade />
-          <p>Retro</p>
+          <p>Coleccionables</p>
         </a>
       </div>
     </>
