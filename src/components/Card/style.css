@@ -105,6 +105,15 @@
   text-align: center;
 }
 
+.product-verified {
+  position: relative;
+  left: 220px;
+  bottom: 44px;
+}
+
+.product-verified::hover {
+}
+
 @media screen and (max-width: 866px) {
   .card {
     margin-left: 10%;
