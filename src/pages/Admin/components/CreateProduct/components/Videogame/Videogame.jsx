@@ -27,6 +27,12 @@ const Console = () => {
       manual: 0,
       disk: 0,
     },
+    discount: {
+      complete: 0,
+      manual: 0,
+      disk: 0,
+    },
+    score: 0,
   });
   const [gameConsole, setGameConsole] = useState({
     platform: "",
@@ -148,6 +154,40 @@ const Console = () => {
       </div>
 
       <div>
+        <h3>Descuentos</h3>
+        <input
+          onChange={({ target }) =>
+            setVideogame({
+              ...videogame,
+              discount: { complete: target.value },
+            })
+          }
+          type="number"
+          placeholder="Completo"
+        ></input>
+        <input
+          onChange={({ target }) =>
+            setVideogame({
+              ...videogame,
+              discount: { manual: target.value },
+            })
+          }
+          type="number"
+          placeholder="Caja y/o Manual"
+        ></input>
+        <input
+          onChange={({ target }) =>
+            setVideogame({
+              ...videogame,
+              discount: { disk: target.value },
+            })
+          }
+          type="number"
+          placeholder="Solo Disco"
+        ></input>
+      </div>
+
+      <div>
         <h3>Cantidad</h3>
         <input
           onChange={({ target }) =>
@@ -178,6 +218,23 @@ const Console = () => {
           }
           type="number"
           placeholder="Solo Disco"
+        ></input>
+      </div>
+
+      <div>
+        <h3>{"Calificacion (Promedio)"}</h3>
+        <input
+          onChange={({ target }) =>
+            setVideogame({
+              ...videogame,
+              discount: { complete: target.value },
+            })
+          }
+          max="10"
+          min="1"
+          step="0.1"
+          type="number"
+          placeholder="Calificacion"
         ></input>
       </div>
 

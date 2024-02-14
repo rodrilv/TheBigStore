@@ -1,6 +1,28 @@
-import React from "react";
-import "./style.css";
+import { Card } from "../../components";
+import { videogames } from "../../helpers/static";
+import "./Main.scss";
 
-export default function Main(props) {
-  return <div className="grid">{props.children}</div>;
+export default function Main() {
+  return (
+    <div className="main">
+      <div>
+        <h2>Novedades</h2>
+        <div style={{ backgroundColor: "#324377" }} className="main-grid">
+          {videogames.map((game, index) => {
+            return (
+              <Card
+                key={index}
+                title={game.title}
+                platform={game.platform}
+                state={game.state}
+                price={game.price}
+                image={game.image}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div></div>
+    </div>
+  );
 }

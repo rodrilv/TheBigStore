@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TbDiscountCheck } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
-import "./style.css";
+import "./Card.scss";
 
 export default function Card({ id, title, state, platform, price, image }) {
   const navigate = useNavigate();
@@ -34,7 +34,6 @@ export default function Card({ id, title, state, platform, price, image }) {
         <div className="product-price">{price}</div>
         {state === "Nuevo" || "Excelente" ? (
           <>
-            <span>{state === "Nuevo" ? "Nuevo" : "Garantizado"}</span>
             <div
               className="product-verified"
               style={{
@@ -42,7 +41,10 @@ export default function Card({ id, title, state, platform, price, image }) {
                 fontSize: 30,
               }}
             >
-              <TbDiscountCheck />
+              <div className="product-state-symbol">
+                <TbDiscountCheck />
+                <p>{state === "Nuevo" ? "Nuevo" : "Garantizado"}</p>
+              </div>
             </div>
           </>
         ) : (

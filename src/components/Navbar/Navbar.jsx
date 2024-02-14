@@ -49,7 +49,7 @@ export default function Navbar() {
             }}
             onKeyDown={handleSearch}
             className="search-bar"
-            placeholder="Buscar por titulo"
+            placeholder="Buscar un juego"
             type="search"
           />
         </div>

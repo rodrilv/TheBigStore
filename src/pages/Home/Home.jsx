@@ -1,26 +1,12 @@
-import React from "react";
-import { Card, Navbar } from "../../components";
+import { Navbar } from "../../components";
 import { Main } from "../";
-import { videogames } from "../../helpers/static";
+import "./Home.scss";
 
-export default function Home({ prop1, prop2 }) {
+export default function Home() {
   return (
-    <div>
+    <div className="home">
       <Navbar />
-      <Main>
-        {videogames.map((game, index) => {
-          return (
-            <Card
-              key={index}
-              title={game.title}
-              platform={game.platform}
-              state={game.state}
-              price={game.price}
-              image={game.image}
-            />
-          );
-        })}
-      </Main>
+      <Main />
     </div>
   );
 }
