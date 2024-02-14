@@ -1,5 +1,8 @@
 import { Card } from "../../components";
 import { videogames } from "../../helpers/static";
+import { useDispatch } from "react-redux";
+import { videogamesSlice } from "../../features/videogamesSlice";
+
 import "./Main.scss";
 
 export default function Main() {
