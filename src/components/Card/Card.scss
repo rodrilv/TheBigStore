@@ -131,6 +131,13 @@
 }
 
 @media screen and (max-width: 866px) {
+  .product-verified {
+    width: 1px;
+    position: relative;
+    left: 70vw;
+    bottom: 25vh;
+  }
+
   .card {
     margin-left: 10%;
     background-color: rgb(9, 16, 36);

@@ -10,7 +10,7 @@ export default function Main() {
     <div className="main">
       <div>
         <h2>Novedades</h2>
-        <div style={{ backgroundColor: "#324377" }} className="main-grid">
+        <div className="main-grid">
           {videogames.map((game, index) => {
             return (
               <Card

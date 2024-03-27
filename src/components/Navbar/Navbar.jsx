@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./style.css";
+import "./Navbar.scss";
 import { FaSearch } from "react-icons/fa";
 import { FaPlaystation, FaXbox } from "react-icons/fa";
 import { SiApplearcade } from "react-icons/si";
 import { setSearch } from "../../features/searchSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { GiConsoleController } from "react-icons/gi";
+
 export default function Navbar() {
   const { search } = useSelector((state) => state.search);
   const dispatch = useDispatch();
@@ -76,6 +78,10 @@ export default function Navbar() {
         <a className="menu-item" href="#">
           <SiApplearcade />
           <p>Coleccionables</p>
+        </a>
+        <a className="menu-item" href="#">
+          <GiConsoleController />
+          <p>Consolas</p>
         </a>
       </div>
     </>

@@ -12,6 +12,6 @@ export const videogamesSlice = createSlice({
   },
 });
 
-export const { setVideogames } = userSlice.actions;
+export const { setVideogames } = videogamesSlice.actions;
 
-export default userSlice.reducer;
+export default videogamesSlice.reducer;

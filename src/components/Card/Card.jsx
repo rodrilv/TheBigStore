@@ -3,7 +3,7 @@ import { TbDiscountCheck } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 import "./Card.scss";
 
-export default function Card({ id, title, state, platform, price, image }) {
+export default function Card({ title, state, platform, price, image }) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
