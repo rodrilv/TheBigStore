@@ -27,32 +27,45 @@ export default function Card({ title, state, platform, price, image }) {
           <img src={image}></img>
         </div>
 
-        <div className="card-title">{title}</div>
-        <div className="card-badge">
-          <div>
+        <div></div>
+
+        <div className="card-body">
+          <div className="card-title">{title}</div>
+          <div className="card-badge">
             <div>
-              {platform.includes(["PS"]) ? (
-                <div style={{ fontSize: "23px" }}>
-                  <SiPlaystation />
-                </div>
-              ) : platform.includes(["Xbox"]) ? (
-                <div style={{ fontSize: "19px" }}>
-                  <SiXbox />
-                </div>
-              ) : (
-                <></>
-              )}
+              <div>
+                {platform.includes(["PS"]) ? (
+                  <div style={{ fontSize: "23px" }}>
+                    <SiPlaystation />
+                  </div>
+                ) : platform.includes(["Xbox"]) ? (
+                  <div style={{ fontSize: "19px" }}>
+                    <SiXbox />
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
             </div>
+            <div className="product-state">{state}</div>
           </div>
-          <div className="product-state">{state}</div>
         </div>
+
         <div className="card-footer">
           <div className="product-price">{price}</div>
-          {state.includes(["Nuevo", "Excelente"]) ? (
+          {[
+            "Nuevo",
+            "Excelente Estado",
+            "Excelente estado",
+            "Buen Estado",
+            "Buen estado",
+            "Usado",
+          ].some((st) => st === state) ? (
             <>
               <div
                 style={{
-                  marginBottom: "40px",
+                  position: "relative",
+                  bottom: "13px",
                   color: state === "Nuevo" ? "#22d623" : "white",
                   fontSize: 30,
                 }}
