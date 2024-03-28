@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TbDiscountCheck } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
+import { SiPlaystation, SiXbox } from "react-icons/si";
 import "./Card.scss";
 
 export default function Card({ title, state, platform, price, image }) {
@@ -27,29 +28,45 @@ export default function Card({ title, state, platform, price, image }) {
         </div>
 
         <div className="card-title">{title}</div>
-        <div className="product-state">{state}</div>
-        <div className="card-badge-title">
-          <div className="card-badge">{platform}</div>
-        </div>
-        <div className="product-price">{price}</div>
-        {state === "Nuevo" || "Excelente" ? (
-          <>
-            <div
-              className="product-verified"
-              style={{
-                color: state === "Nuevo" ? "#22d623" : "white",
-                fontSize: 30,
-              }}
-            >
-              <div className="product-state-symbol">
-                <TbDiscountCheck />
-                <p>{state === "Nuevo" ? "Nuevo" : "Garantizado"}</p>
-              </div>
+        <div className="card-badge">
+          <div>
+            <div>
+              {platform.includes(["PS"]) ? (
+                <div style={{ fontSize: "23px" }}>
+                  <SiPlaystation />
+                </div>
+              ) : platform.includes(["Xbox"]) ? (
+                <div style={{ fontSize: "19px" }}>
+                  <SiXbox />
+                </div>
+              ) : (
+                <></>
+              )}
             </div>
-          </>
-        ) : (
-          <></>
-        )}
+          </div>
+          <div className="product-state">{state}</div>
+        </div>
+        <div className="card-footer">
+          <div className="product-price">{price}</div>
+          {state.includes(["Nuevo", "Excelente"]) ? (
+            <>
+              <div
+                style={{
+                  marginBottom: "40px",
+                  color: state === "Nuevo" ? "#22d623" : "white",
+                  fontSize: 30,
+                }}
+              >
+                <div className="product-state-symbol">
+                  <TbDiscountCheck />
+                  <p>{state === "Nuevo" ? "Nuevo" : "Garantizado"}</p>
+                </div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </div>
   );

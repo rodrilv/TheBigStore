@@ -1,13 +1,11 @@
 .card {
-  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(9, 16, 36);
   transition: 0.1s;
-  margin-top: 20px;
   box-shadow: 1px 4px 10px -6px;
-  padding: 0px;
   height: 480px;
   width: 260px;
-  /*border-radius: 10px;*/
 }
 
 .card-loading {
@@ -54,67 +52,41 @@
   font-size: 18px;
 }
 
-.game-image img {
+.card-footer {
   display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.game-image img {
   width: 260px;
   height: 320px;
 }
 
-.card-badge-title {
-  z-index: 1;
-  text-align: center;
-  margin-left: 9px;
-  height: 10px;
-  width: 37%;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-}
-
 .card-badge {
-  padding: 1px 1px 1px 3px;
-  position: relative;
-  border-radius: 12px;
-  height: 17px;
-  background-color: black;
-  z-index: 2;
-  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
+.product-state {
+  color: rgb(0, 204, 255);
+  text-align: center;
+}
+
 .product-price {
-  padding: 16px;
-  margin-top: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: rgb(34, 250, 34);
   font-weight: bolder;
   font-size: 22px;
-  width: 190px;
-}
-
-.product-state {
-  position: absolute;
-  margin-left: 115px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  color: rgb(0, 204, 255);
-  text-align: center;
-}
-
-.product-verified {
-  width: 1px;
-  position: relative;
-  left: 200px;
-  bottom: 44px;
 }
 
 .product-state-symbol {
-  margin-top: 7px;
-  margin-left: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   p {
