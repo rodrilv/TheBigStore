@@ -1,10 +1,9 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { videogames } from "../../helpers/static";
 import Navbar from "../../components/Navbar/Navbar";
 import Card from "../../components/Card/Card";
-import Main from "../../components/Main/Main";
+import "../Main/Main.scss";
 
 export default function SearchProduct() {
   const [searchedGames, setSearchedGames] = useState([]);
@@ -21,7 +20,7 @@ export default function SearchProduct() {
   return (
     <div>
       <Navbar />
-      <Main>
+      <div className="main-grid">
         {searchedGames.map((game, index) => {
           return (
             <Card
@@ -34,7 +33,7 @@ export default function SearchProduct() {
             />
           );
         })}
-      </Main>
+      </div>
     </div>
   );
 }

@@ -59,7 +59,6 @@ export default function Navbar() {
           style={{
             display: "flex",
             flexDirection: "row",
-
             fontSize: 30,
             color: "white",
           }}

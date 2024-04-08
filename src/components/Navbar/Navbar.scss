@@ -1,25 +1,26 @@
 .navbar {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-top: 25px;
 }
 
 .search {
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
   height: 40px;
-  width: 70%;
+  width: 55%;
   border: solid #4e5461;
 }
 
 .search-bar {
+  width: 85%;
   height: 40px;
   color: white;
   border: none;
@@ -106,7 +107,14 @@
   }
 
   .search-bar {
-    font-size: 16px;
+    width: 65%;
+    font-size: 14px;
+  }
+
+  .search {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
   }
 }
 

@@ -10,17 +10,19 @@ export default function Card({ title, state, platform, price, image }) {
 
   return (
     <div className={loading ? "card-loading" : ""}>
-      {loading ? <span className="card-loader"></span> : null}
+      {loading ? (
+        <div className="card-loader-container">
+          <span className="card-loader"></span>
+        </div>
+      ) : null}
 
       <div
         className="card"
         onClick={() => {
-          setLoading(true);
-          if (loading) {
+          if (!loading) {
+            setLoading(true);
             return;
           }
-          //navigate(`/game/${id}`);
-          console.log("Clicked");
         }}
       >
         <div className="game-image">
