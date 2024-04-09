@@ -163,7 +163,7 @@ const Console = () => {
             })
           }
           type="number"
-          placeholder="Completo"
+          placeholder="Completo (%)"
         ></input>
         <input
           onChange={({ target }) =>
@@ -173,7 +173,7 @@ const Console = () => {
             })
           }
           type="number"
-          placeholder="Caja y/o Manual"
+          placeholder="Caja y/o Manual (%)"
         ></input>
         <input
           onChange={({ target }) =>
@@ -183,7 +183,7 @@ const Console = () => {
             })
           }
           type="number"
-          placeholder="Solo Disco"
+          placeholder="Solo Disco (%)"
         ></input>
       </div>
 
@@ -227,7 +227,7 @@ const Console = () => {
           onChange={({ target }) =>
             setVideogame({
               ...videogame,
-              discount: { complete: target.value },
+              score: target.value,
             })
           }
           max="10"
