@@ -6,7 +6,7 @@ import {
   //Switch,
 } from "react-router-dom";
 
-import { Admin, Home, SearchProduct, Product } from "./pages";
+import { Home, SearchProduct, Product } from "./pages";
 import "./App.css";
 function App() {
   return (
@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search/:title" element={<SearchProduct />} />
-        <Route path="/administration" element={<Admin />} />
         <Route path="/product/" element={<Product />} />
         <Route path="*" element={<Navigate to={"/"} />} />
       </Routes>

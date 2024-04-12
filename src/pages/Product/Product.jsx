@@ -1,5 +1,11 @@
+import { Navbar } from "../../components";
 const Product = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Navbar />
+      <div></div>
+    </div>
+  );
 };
 
 export default Product;
