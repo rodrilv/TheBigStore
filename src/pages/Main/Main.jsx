@@ -9,19 +9,13 @@ export default function Main() {
   return (
     <div className="main">
       <div>
-        <h2>Novedades</h2>
+        <div className="main-section">
+          <h2>Novedades</h2>
+        </div>
+
         <div className="main-grid">
           {videogames.map((game, index) => {
-            return (
-              <Card
-                key={index}
-                title={game.title}
-                platform={game.platform}
-                state={game.state}
-                price={game.price}
-                image={game.image}
-              />
-            );
+            return <Card key={index} {...game} />;
           })}
         </div>
       </div>

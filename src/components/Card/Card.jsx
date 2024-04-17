@@ -2,13 +2,14 @@ import { useState } from "react";
 import { TbDiscountCheck } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 import { SiPlaystation, SiXbox } from "react-icons/si";
+import { BsStar, BsStarHalf, BsStarFill } from "react-icons/bs";
 import { MXN } from "../../helpers";
 import "./Card.scss";
 
-export default function Card({ title, state, platform, price, image }) {
+export default function Card({ title, platform, image, vendor, score }) {
+  console.log(vendor);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const [st, setSt] = useState(state.complete || state.manual || state.disk);
 
   return (
     <div className={loading ? "card-loading" : ""}>
@@ -27,63 +28,68 @@ export default function Card({ title, state, platform, price, image }) {
           }
         }}
       >
-        <div className="game-image">
+        <div className="card-image">
           <img src={image}></img>
         </div>
 
         <div className="card-body">
-          <div className="card-title">{title}</div>
-          <div className="card-badge">
-            <div>
-              <div>
-                {platform.includes("PS") ? (
-                  <div style={{ fontSize: "23px" }}>
-                    <SiPlaystation />
-                  </div>
-                ) : platform.includes("Xbox") ? (
-                  <div style={{ fontSize: "19px" }}>
-                    <SiXbox />
-                  </div>
-                ) : (
-                  <></>
-                )}
-              </div>
-            </div>
-            <div className="product-state">
-              {state.complete || state.manual || state.disk}
-            </div>
+          <h2>{title}</h2>
+          <div>
+            {platform.includes("PS") ? (
+              <>
+                <SiPlaystation />
+                <p>{vendor[0]["state"]}</p>
+              </>
+            ) : platform.includes("Xbox") ? (
+              <>
+                <SiXbox />
+                <p>{vendor[0]["state"]}</p>
+              </>
+            ) : (
+              <p>No disponible</p>
+            )}
           </div>
         </div>
 
         <div className="card-footer">
-          <div className="product-price">
-            {price.complete
-              ? MXN.format(price.complete)
-              : price.disk
-              ? MXN.format(price.disk)
-              : price.manual
-              ? MXN.format(price.manual)
-              : "No Disponible"}
-          </div>
-          {st.includes(st) ? (
-            <>
-              <div
+          <div className="card-footer-1">
+            <div>
+              <TbDiscountCheck
                 style={{
-                  position: "relative",
-                  bottom: "13px",
-                  color: st === "Nuevo" ? "#22d623" : "white",
-                  fontSize: 30,
+                  color: ["Excelente Estado", "Buen Estado", "Usado"].includes(
+                    vendor[0]["state"]
+                  )
+                    ? "white"
+                    : "yellow",
                 }}
-              >
-                <div className="product-state-symbol">
-                  <TbDiscountCheck />
-                  <p>{st === "Nuevo" ? "Nuevo" : "Garantizado"}</p>
-                </div>
-              </div>
-            </>
-          ) : (
-            <></>
-          )}
+              />
+
+              {["Excelente Estado", "Buen Estado", "Usado"].includes(
+                vendor[0]["state"]
+              ) ? (
+                <p style={{ color: "white" }}>Garantizado</p>
+              ) : (
+                <p style={{ color: "yellow" }}>Nuevo</p>
+              )}
+            </div>
+            <h2>{MXN.format(vendor[0]["price"])}</h2>
+          </div>
+          <div className="card-footer-2">
+            <div>
+              {score > 4.5 ? (
+                <BsStarFill style={{ color: "yellow" }} />
+              ) : score < 4.4 && score > 3.3 ? (
+                <BsStarFill style={{ color: "#e0e4e6" }} />
+              ) : score < 3.2 && score > 2.3 ? (
+                <BsStarHalf style={{ color: "#e0e4e6" }} />
+              ) : (
+                <BsStar />
+              )}
+            </div>
+            <div>
+              <p>{score}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
