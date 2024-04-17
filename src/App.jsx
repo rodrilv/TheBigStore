@@ -3,7 +3,6 @@ import {
   Route,
   Routes,
   Navigate,
-  //Switch,
 } from "react-router-dom";
 
 import { Home, SearchProduct, Product } from "./pages";

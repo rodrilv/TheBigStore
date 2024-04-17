@@ -3,7 +3,12 @@ const Product = () => {
   return (
     <div>
       <Navbar />
-      <div></div>
+      <div>
+        <div>
+          <img src="" />
+        </div>
+        <div></div>
+      </div>
     </div>
   );
 };
