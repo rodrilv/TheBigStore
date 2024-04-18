@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar">
-        <div className="logo">
+        <div onClick={() => navigate("/")} className="logo">
           <h1 className="text-logo">R4</h1>
           <h1 className="text-logo">GameStore</h1>
         </div>

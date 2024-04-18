@@ -7,21 +7,21 @@ export const videogames = [
     score: 4.2,
     vendor: [
       {
-        vendorId: "ABDHSDJHDFSFHJKSFKJ",
+        vendorId: "GamerPro1",
         price: 9099,
         state: "Nuevo",
-        condition: "Completo",
+        condition: "Sólo Disco y/o Manual",
         sponsored: true,
       },
       {
-        vendorId: "ABDHSDJ34234234SFKJ",
+        vendorId: "GamerPro2",
         price: 5129,
         state: "Usado",
         condition: "Completo",
         sponsored: false,
       },
       {
-        vendorId: "23423423SDJHDFSFHJKSFKJ",
+        vendorId: "GamerPro3",
         price: 7162,
         state: "Buen estado",
         condition: "Completo",
@@ -30,46 +30,50 @@ export const videogames = [
     ],
   },
   {
-    title: "Dark Souls 3: The Fire Fades",
-    platform: "Xbox Series X",
+    title: "Dark Souls III: The Fire Fades Edition (GOTY)",
+    platform: "PS4",
     image: "https://m.media-amazon.com/images/I/616p1i6gfxL._AC_SX679_.jpg",
     tags: ["action", "horror", "survival", "third-person"],
     score: 4.9,
     vendor: [
       {
-        vendorId: "ABDHSDJHDFSFHJKSFKJ",
+        vendorId: "R4 Games Store",
         price: 799,
         state: "Excelente Estado",
         condition: "Completo",
+        stock: 1,
+        discount: 0.3,
         sponsored: true,
-        stock: 1
+        protected: true,
+        verified: true,
       },
       {
-        vendorId: "ABDHSDJHDFSFHJKSFKJ",
+        vendorId: "GamerPro1",
         price: 650,
         state: "Nuevo",
         condition: "Completo",
         sponsored: false,
-        stock: 1
-
+        verified: true,
+        stock: 1,
+        discount: 0,
       },
       {
-        vendorId: "ABDHSDJ34234234SFKJ",
+        vendorId: "GamerPro2",
         price: 450,
         state: "Usado",
         condition: "Completo",
         sponsored: false,
-        stock: 1
-
+        stock: 1,
+        discount: 0.5,
       },
       {
-        vendorId: "23423423SDJHDFSFHJKSFKJ",
+        vendorId: "GamerPro3",
         price: 918,
         state: "Buen estado",
         condition: "Completo",
         sponsored: false,
-        stock: 1
-
+        stock: 1,
+        discount: 0,
       },
     ],
   },

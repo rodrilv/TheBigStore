@@ -35,18 +35,18 @@ button {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 16px;
-  border-radius: 3px;
-  padding: 15px;
+  border-radius: 30px;
+  padding: 13px;
   outline: none;
   border: none;
   color: white;
-  background-color: #2f2a49;
+  background-color: #324377;
   cursor: pointer;
   transition: 0.4s;
 }
 
 button:hover {
-  background-color: #65607d;
+  background-color: #142147;
   transition: 0.4s;
 }
 

@@ -9,16 +9,103 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 15%;
+  gap: 3%;
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  background-color: #1f336f;
+}
+
+.product-description {
+  background-color: #1d2d5f;
+  padding: 0px 25px;
+
+  .product-description-header {
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      position: relative;
+      bottom: 15px;
+      height: 30px;
+    }
+    h2 {
+      width: 400px;
+    }
+    h3 {
+      position: relative;
+      bottom: 21px;
+    }
+  }
+
+  .product-description-price {
+    position: relative;
+    bottom: 30px;
+    height: 30px;
+    h3 {
+      font-size: 26px;
+      color: rgb(4, 255, 4);
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+    s {
+      color: grey;
+      opacity: 0.9;
+    }
+  }
+
+  .product-description-score {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    gap: 10px;
+    p {
+      position: relative;
+      bottom: 21px;
+    }
+  }
+
+  .product-description-state {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    div {
+      position: relative;
+      top: 6px;
+      width: 190px;
+    }
+  }
+
+  .product-description-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .product-description-conditions {
+    div {
+      height: 45px;
+      display: flex;
+      flex-direction: row;
+      gap: 13px;
+      svg {
+        font-size: 22px;
+        position: relative;
+        top: 20px;
+      }
+      b {
+        color: #24a2db;
+      }
+    }
+  }
 }
 
 .product-image {
   img {
-    width: 380px;
+    width: 385px;
   }
 }
 
@@ -31,12 +118,60 @@
 .product-offers {
   margin-left: auto;
   margin-right: auto;
-  background-color: #1f336f;
-  width: 75vw;
+  width: 80vw;
 }
 
 .product-offer {
   display: flex;
   flex-direction: row;
-  gap: 20%;
+  gap: 5%;
+  border-bottom: dotted 1px white;
+
+  .product-offer-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    img {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+  }
+
+  .product-offer-vendor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 25%;
+    h3 {
+      font-size: 16px;
+    }
+    svg {
+      font-size: 16px;
+      position: relative;
+      left: 10px;
+    }
+  }
+
+  .product-offer-state {
+    s {
+      opacity: 0.6;
+    }
+    width: 25%;
+  }
+
+  .product-offer-actions {
+    width: 25%;
+    button {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 866px) {
 }
