@@ -24,6 +24,10 @@ export default function Card({ title, platform, image, vendor, score }) {
         onClick={() => {
           if (!loading) {
             setLoading(true);
+            setTimeout(() => {
+              navigate("/product");
+              setLoading(false);
+            }, 2000);
             return;
           }
         }}
@@ -87,7 +91,7 @@ export default function Card({ title, platform, image, vendor, score }) {
               )}
             </div>
             <div>
-              <p>{score}</p>
+              <p>{score}/5</p>
             </div>
           </div>
         </div>

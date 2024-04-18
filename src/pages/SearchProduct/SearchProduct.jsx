@@ -22,16 +22,7 @@ export default function SearchProduct() {
       <Navbar />
       <div className="main-grid">
         {searchedGames.map((game, index) => {
-          return (
-            <Card
-              key={index}
-              title={game.title}
-              platform={game.platform}
-              state={game.state}
-              price={game.price}
-              image={game.image}
-            />
-          );
+          return <Card key={index} {...game} />;
         })}
       </div>
     </div>

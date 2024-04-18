@@ -1,0 +1,42 @@
+.product-main {
+  margin-top: 60px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  background-color: #1f336f;
+}
+
+.product-image {
+  img {
+    width: 380px;
+  }
+}
+
+.product-section-1 {
+  position: relative;
+  left: 12.2%;
+  width: 200px;
+}
+
+.product-offers {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #1f336f;
+  width: 75vw;
+}
+
+.product-offer {
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+}

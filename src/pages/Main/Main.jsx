@@ -2,7 +2,6 @@ import { Card } from "../../components";
 import { videogames } from "../../helpers/static";
 import { useDispatch } from "react-redux";
 import { videogamesSlice } from "../../features/videogamesSlice";
-
 import "./Main.scss";
 
 export default function Main() {
@@ -10,7 +9,7 @@ export default function Main() {
     <div className="main">
       <div>
         <div className="main-section">
-          <h2>Novedades</h2>
+          <h2>Lo más reciente</h2>
         </div>
 
         <div className="main-grid">
