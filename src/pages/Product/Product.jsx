@@ -156,12 +156,27 @@ const Product = () => {
                     <img src={Logo}></img>
                   </div>
                   <div className="product-offer-vendor">
-                    <h3>{product.vendorId}</h3>
-                    {product.verified ? (
-                      <BsFillPatchCheckFill style={{ color: "#24a2db" }} />
-                    ) : (
-                      <></>
-                    )}
+                    <div>
+                      <h3>{product.vendorId}</h3>
+                      {product.verified ? (
+                        <BsFillPatchCheckFill style={{ color: "#24a2db" }} />
+                      ) : (
+                        <></>
+                      )}
+                    </div>
+                    <div>
+                      <small>Valoración del vendedor:</small>
+                      {product.score > 4.5 ? (
+                        <BsStarFill style={{ color: "yellow" }} />
+                      ) : product.score < 4.4 && product.score > 3.3 ? (
+                        <BsStarFill style={{ color: "#e0e4e6" }} />
+                      ) : product.score < 3.2 && product.score > 2.3 ? (
+                        <BsStarHalf style={{ color: "#e0e4e6" }} />
+                      ) : (
+                        <BsStar />
+                      )}
+                      <h3>{product.score ?? "?"} / 5</h3>
+                    </div>
                   </div>
                   <div className="product-offer-state">
                     {product.discount ? (

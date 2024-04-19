@@ -46,6 +46,7 @@ export const videogames = [
         sponsored: true,
         protected: true,
         verified: true,
+        score: 4.9,
       },
       {
         vendorId: "GamerPro1",
