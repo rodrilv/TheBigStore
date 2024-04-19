@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Navbar, SponsoredProduct } from "../../components";
 import { videogames } from "../../helpers/static";
 import { MXN } from "../../helpers";
@@ -17,6 +18,16 @@ import { IoShieldCheckmark } from "react-icons/io5";
 import Logo from "../../assets/profile_example.webp";
 
 const Product = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <div>
       <Navbar />
@@ -166,7 +177,7 @@ const Product = () => {
                       </div>
                     ) : (
                       <h3 style={{ color: "rgb(4, 255, 4)" }}>{`${MXN.format(
-                        videogames[1].vendor[0].price
+                        product.price
                       )} MXN`}</h3>
                     )}
                     <h3>{product.condition}</h3>
@@ -176,6 +187,9 @@ const Product = () => {
                   <div className="product-offer-actions">
                     <button>Comprar</button>
                     <button>Agregar al carrito</button>
+                    <div>
+                      {product.sponsored ? <SponsoredProduct /> : <></>}
+                    </div>
                   </div>
                 </div>
               );
