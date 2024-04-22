@@ -18,11 +18,18 @@ import { IoShieldCheckmark } from "react-icons/io5";
 import Logo from "../../assets/profile_example.webp";
 
 const Product = () => {
-  const scrollToTop = () => {
+  const scrollPageTop = (top = 0) => {
     window.scrollTo({
-      top: 0,
+      top,
       behavior: "smooth",
     });
+  };
+  const scrollToTop = () => {
+    if (window.screen.width <= 500) {
+      scrollPageTop(490);
+    } else {
+      scrollPageTop(0);
+    }
   };
 
   useEffect(() => {
@@ -104,7 +111,7 @@ const Product = () => {
                 ) : videogames[1].vendor[0].condition.includes(
                     "Caja y/o Manual"
                   ) ? (
-                  <MdOutlineDiscFull />
+                  <MdOutlineDiscFull style={{ fontSize: 18 }} />
                 ) : (
                   <LuDisc />
                 )}

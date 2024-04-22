@@ -37,7 +37,7 @@
       flex-direction: row;
       gap: 10px;
       position: relative;
-      bottom: 15px;
+      bottom: 10px;
       height: 30px;
     }
     h2 {
@@ -71,11 +71,11 @@
   .product-description-score {
     display: flex;
     flex-direction: row;
-    height: 30px;
+    height: 20px;
     gap: 10px;
     p {
       position: relative;
-      bottom: 21px;
+      bottom: 15px;
     }
   }
 
@@ -192,14 +192,47 @@
     gap: 3%;
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 390px;
   }
 
   .product-image {
+    margin-left: auto;
+    margin-right: auto;
     img {
       width: 385px;
     }
   }
+
+  .product-description {
+    .product-description-state {
+      display: flex;
+      flex-direction: row;
+      div {
+        width: 180px;
+      }
+      h3 {
+        width: auto;
+        font-size: 16px;
+      }
+    }
+
+    .product-description-conditions {
+      div {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        svg {
+          font-size: 16px;
+          top: 19px;
+        }
+      }
+    }
+
+    .product-description-actions {
+      padding: 12px;
+    }
+  }
+
   .product-offers {
     width: 100%;
   }
@@ -259,6 +292,55 @@
   }
 }
 
-@media screen and (max-width: 866px) {
-  
+@media screen and (max-width: 500px) {
+  .product-info {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .product-image {
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      width: 285px;
+    }
+  }
+
+  .product-description {
+    .product-description-header {
+      width: 70vw;
+      font-size: 14px;
+      h2 {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .product-description {
+    .product-description-state {
+      div {
+        width: 160px;
+      }
+      h3 {
+        width: auto;
+        font-size: 16px;
+      }
+    }
+
+    .product-description-conditions {
+      div {
+        font-size: 14px;
+        svg {
+          font-size: 16px;
+          top: 19px;
+        }
+      }
+    }
+  }
 }

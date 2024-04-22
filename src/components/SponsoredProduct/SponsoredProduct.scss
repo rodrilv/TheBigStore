@@ -16,3 +16,14 @@
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .sponsored-product-main {
+    p {
+      font-size: 12px;
+    }
+    svg {
+      font-size: 14px;
+    }
+  }
+}
