@@ -22,9 +22,11 @@
 }
 
 .product-section-1 {
-  position: relative;
-  left: 12.2%;
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .product-description {
@@ -292,6 +294,36 @@
   }
 }
 
+@media screen and (max-width: 790px) {
+  .product-offer {
+    display: flex;
+    flex-direction: column;
+
+    .product-offer-picture {
+      display: none;
+    }
+
+    .product-offer-vendor {
+      width: auto;
+    }
+
+    .product-offer-state {
+      width: auto;
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+
+    .product-offer-actions {
+      width: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 500px) {
   .product-info {
     flex-direction: column;
@@ -318,6 +350,12 @@
         width: auto;
       }
     }
+  }
+
+  .product-section-1 {
+    position: relative;
+    left: 3%;
+    width: 95%;
   }
 }
 
