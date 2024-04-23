@@ -153,7 +153,11 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <h2 className="product-section-1">Otras ofertas</h2>
+        <div className="product-section-1">
+          <h2>Otras ofertas de:</h2>
+          <h2>{videogames[1].title}</h2>
+        </div>
+
         <div className="product-offers">
           {videogames[1].vendor &&
             videogames[1].vendor.map((product, index) => {
@@ -198,12 +202,16 @@ const Product = () => {
                         </h3>
                       </div>
                     ) : (
-                      <h3 style={{ color: "rgb(4, 255, 4)" }}>{`${MXN.format(
-                        product.price
-                      )} MXN`}</h3>
+                      <div>
+                        <h3 style={{ color: "rgb(4, 255, 4)" }}>{`${MXN.format(
+                          product.price
+                        )} MXN`}</h3>
+                      </div>
                     )}
-                    <h3>{product.condition}</h3>
-                    <h3>{product.state}</h3>
+                    <div>
+                      <h3>{product.condition}</h3>
+                      <h3>{product.state}</h3>
+                    </div>
                   </div>
 
                   <div className="product-offer-actions">
