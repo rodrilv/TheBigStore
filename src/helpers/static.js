@@ -39,7 +39,7 @@ export const videogames = [
       {
         vendorId: "R4 Games Store",
         price: 799,
-        state: "Excelente Estado",
+        state: "Buen estado",
         condition: "Completo",
         stock: 1,
         discount: 0.3,
@@ -88,7 +88,7 @@ export const videogames = [
       {
         vendorId: "ABDHSDJHDFSFHJKSFKJ",
         price: 799,
-        state: "Excelente Estado",
+        state: "Usado",
         condition: "Completo",
         sponsored: true,
       },
@@ -104,7 +104,7 @@ export const videogames = [
       {
         vendorId: "ABDHSDJHDFSFHJKSFKJ",
         price: 799,
-        state: "Excelente Estado",
+        state: "Excelente estado",
         condition: "Completo",
         sponsored: true,
       },
@@ -120,7 +120,7 @@ export const videogames = [
       {
         vendorId: "ABDHSDJHDFSFHJKSFKJ",
         price: 799,
-        state: "Excelente Estado",
+        state: "Excelente estado",
         condition: "Completo",
         sponsored: true,
       },
@@ -136,7 +136,7 @@ export const videogames = [
       {
         vendorId: "ABDHSDJHDFSFHJKSFKJ",
         price: 799,
-        state: "Excelente Estado",
+        state: "Excelente estado",
         condition: "Completo",
         sponsored: true,
       },
@@ -168,7 +168,7 @@ export const videogames = [
       {
         vendorId: "ABDHSDJHDFSFHJKSFKJ",
         price: 799,
-        state: "Excelente Estado",
+        state: "Excelente estado",
         condition: "Completo",
         sponsored: true,
       },
@@ -184,7 +184,7 @@ export const videogames = [
       {
         vendorId: "ABDHSDJHDFSFHJKSFKJ",
         price: 799,
-        state: "Excelente Estado",
+        state: "Excelente estado",
         condition: "Buen Estado",
         sponsored: true,
       },

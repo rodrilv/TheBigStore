@@ -32,69 +32,83 @@ export default function Card({ title, platform, image, vendor, score }) {
           }
         }}
       >
-        <div className="card-image">
-          <img src={image}></img>
+        <div className="card-header">
+          <div className="card-header-image">
+            <img src={image} />
+          </div>
+
+          <div className="card-header-title">
+            <h2>{title}</h2>
+          </div>
         </div>
 
         <div className="card-body">
-          <h2>{title}</h2>
-          <div>
-            {platform.includes("PS") ? (
-              <>
-                <SiPlaystation />
-                <p>{vendor[0]["state"]}</p>
-              </>
-            ) : platform.includes("Xbox") ? (
-              <>
-                <SiXbox />
-                <p>{vendor[0]["state"]}</p>
-              </>
-            ) : (
-              <p>No disponible</p>
-            )}
+          <div className="card-body-1">
+            <div className="card-body-platform">
+              {platform.includes("PS") ? (
+                <div>
+                  <SiPlaystation />
+                  <p>{platform}</p>
+                </div>
+              ) : platform.includes("Xbox") ? (
+                <div>
+                  <SiXbox />
+                  <p>{platform}</p>
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
+
+            <div className="card-body-state">
+              {vendor[0].state === "Usado" ? (
+                <div>
+                  <p>{vendor[0].state}</p>
+                </div>
+              ) : vendor[0].state === "Buen estado" ? (
+                <div>
+                  <p>{vendor[0].state}</p>
+                </div>
+              ) : vendor[0].state === "Excelente estado" ? (
+                <div>
+                  <TbDiscountCheck />
+                  <p>Garantizado</p>
+                </div>
+              ) : vendor[0].state === "Nuevo" ? (
+                <div style={{ color: "yellow" }}>
+                  <TbDiscountCheck style={{ color: "yellow" }} />
+                  <p>Nuevo</p>
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
+          </div>
+          <div className="card-body-2">
+            <div className="card-body-price">
+              {vendor[0].discount ? (
+                <div>
+                  <h3 style={{ textDecoration: "line-through", color: "grey" }}>
+                    {MXN.format(vendor[0].price)}
+                  </h3>
+                  <h3 style={{ color: "#1ae817" }}>
+                    {MXN.format(
+                      vendor[0].price - vendor[0].price * vendor[0].discount
+                    )}
+                  </h3>
+                </div>
+              ) : (
+                <div>
+                  <h3 style={{ color: "#1ae817" }}>
+                    {MXN.format(vendor[0].price)}
+                  </h3>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
-        <div className="card-footer">
-          <div className="card-footer-1">
-            <div>
-              <TbDiscountCheck
-                style={{
-                  color: ["Excelente Estado", "Buen Estado", "Usado"].includes(
-                    vendor[0]["state"]
-                  )
-                    ? "white"
-                    : "yellow",
-                }}
-              />
-
-              {["Excelente Estado", "Buen Estado", "Usado"].includes(
-                vendor[0]["state"]
-              ) ? (
-                <p style={{ color: "white" }}>Garantizado</p>
-              ) : (
-                <p style={{ color: "yellow" }}>Nuevo</p>
-              )}
-            </div>
-            <h2>{MXN.format(vendor[0]["price"])}</h2>
-          </div>
-          <div className="card-footer-2">
-            <div>
-              {score > 4.5 ? (
-                <BsStarFill style={{ color: "yellow" }} />
-              ) : score < 4.4 && score > 3.3 ? (
-                <BsStarFill style={{ color: "#e0e4e6" }} />
-              ) : score < 3.2 && score > 2.3 ? (
-                <BsStarHalf style={{ color: "#e0e4e6" }} />
-              ) : (
-                <BsStar />
-              )}
-            </div>
-            <div>
-              <p>{score}/5</p>
-            </div>
-          </div>
-        </div>
+        <div></div>
       </div>
     </div>
   );
