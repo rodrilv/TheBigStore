@@ -7,6 +7,8 @@ import { SiApplearcade } from "react-icons/si";
 import { setSearch } from "../../features/searchSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { GiConsoleController } from "react-icons/gi";
+import { CgProfile } from "react-icons/cg";
+import { FaCartShopping } from "react-icons/fa6";
 
 export default function Navbar() {
   const { search } = useSelector((state) => state.search);
@@ -36,7 +38,7 @@ export default function Navbar() {
               position: "relative",
               top: 3,
               marginLeft: 20,
-              marginRight: 20,
+              marginRightF: 20,
             }}
           >
             <FaSearch />
@@ -63,6 +65,14 @@ export default function Navbar() {
             color: "white",
           }}
         ></div>
+        <div className="navbar-profile">
+          <CgProfile />
+          <h2>Iniciar Sesión</h2>
+        </div>
+        <div className="navbar-profile">
+          <FaCartShopping />
+          <h2>Carrito</h2>
+        </div>
       </div>
 
       <div className="menu">

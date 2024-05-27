@@ -5,6 +5,25 @@
   height: 160px;
 }
 
+.navbar-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  h2 {
+    font-size: 16px;
+  }
+
+  svg {
+    font-size: 20px;
+  }
+
+  margin-left: 40px;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -15,10 +34,15 @@
 .search {
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: 120px;
+  margin-right: 100px;
   height: 40px;
-  width: 40%;
+  width: 30%;
   border: solid #4e5461;
+  svg {
+    margin-bottom: 2px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
 }
 
 .search-bar {
@@ -29,14 +53,23 @@
   outline: none;
   background-color: #142147;
   font-family: Unispace;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .logo {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 42px;
   cursor: pointer;
+}
+
+.text-logo {
+  margin-top: -10px;
+  animation: flicker 1.5s infinite alternate;
+  font-family: "Unispace";
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
 }
 
 .menu-item {
@@ -66,14 +99,6 @@
 .menu-item:hover {
   background-color: rgba(171, 171, 255, 0.219);
   border-bottom: 3px solid rgb(171, 171, 255);
-}
-
-.text-logo {
-  margin-top: -9px;
-  animation: flicker 1.5s infinite alternate;
-  font-family: "Unispace";
-  color: #fff;
-  text-align: center;
 }
 
 @keyframes flicker {
