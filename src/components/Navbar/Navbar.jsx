@@ -66,12 +66,14 @@ export default function Navbar() {
           }}
         ></div>
         <div className="navbar-profile">
-          <CgProfile />
-          <h2>Iniciar Sesión</h2>
-        </div>
-        <div className="navbar-profile">
-          <FaCartShopping />
-          <h2>Carrito</h2>
+          <div className="navbar-profile-item">
+            <CgProfile />
+            <h2>Iniciar Sesión</h2>
+          </div>
+          <div className="navbar-profile-item">
+            <FaCartShopping />
+            <h2>Carrito</h2>
+          </div>
         </div>
       </div>
 

@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search/:title" element={<SearchProduct />} />
-        <Route path="/product/" element={<Product />} />
+        <Route path="/product/:id" element={<Product />} />
         <Route path="*" element={<Navigate to={"/"} />} />
       </Routes>
     </Router>

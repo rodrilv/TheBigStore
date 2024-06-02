@@ -6,8 +6,7 @@ import { BsStar, BsStarHalf, BsStarFill } from "react-icons/bs";
 import { MXN } from "../../helpers";
 import "./Card.scss";
 
-export default function Card({ title, platform, image, vendor, score }) {
-  console.log(vendor);
+export default function Card({ _id, title, platform, product, image, score }) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
@@ -21,14 +20,15 @@ export default function Card({ title, platform, image, vendor, score }) {
 
       <div
         className="card"
-        onClick={() => {
-          if (!loading) {
-            setLoading(true);
-            setTimeout(() => {
-              navigate("/product");
+        style={{ opacity: product ? 1 : 0.5 }}
+        onClick={async () => {
+          if (product) {
+            if (!loading) {
+              setLoading(true);
+              navigate(`/product/${_id}`);
               setLoading(false);
-            }, 2000);
-            return;
+              return;
+            }
           }
         }}
       >
@@ -61,54 +61,83 @@ export default function Card({ title, platform, image, vendor, score }) {
             </div>
 
             <div className="card-body-state">
-              {vendor[0].state === "Usado" ? (
-                <div>
-                  <p>{vendor[0].state}</p>
-                </div>
-              ) : vendor[0].state === "Buen estado" ? (
-                <div>
-                  <p>{vendor[0].state}</p>
-                </div>
-              ) : vendor[0].state === "Excelente estado" ? (
-                <div>
-                  <TbDiscountCheck />
-                  <p>Garantizado</p>
-                </div>
-              ) : vendor[0].state === "Nuevo" ? (
-                <div style={{ color: "yellow" }}>
-                  <TbDiscountCheck style={{ color: "yellow" }} />
-                  <p>Nuevo</p>
-                </div>
+              {product ? (
+                <>
+                  {product.state === "Usado" ? (
+                    <div>
+                      <p>{product.state}</p>
+                    </div>
+                  ) : product.state === "Buen estado" ? (
+                    <div>
+                      <p>{product.state}</p>
+                    </div>
+                  ) : product.state === "Excelente estado" ? (
+                    <div>
+                      <TbDiscountCheck />
+                      <p>Garantizado</p>
+                    </div>
+                  ) : product.state === "Nuevo" ? (
+                    <div style={{ color: "yellow" }}>
+                      <TbDiscountCheck style={{ color: "yellow" }} />
+                      <p>Nuevo</p>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </>
               ) : (
-                <></>
+                <p className="product-unavailable">
+                  No disponible por el momento
+                </p>
               )}
             </div>
           </div>
           <div className="card-body-2">
-            <div className="card-body-price">
-              {vendor[0].discount ? (
-                <div>
-                  <h3 style={{ textDecoration: "line-through", color: "grey" }}>
-                    {MXN.format(vendor[0].price)}
-                  </h3>
-                  <h3 style={{ color: "#1ae817" }}>
-                    {MXN.format(
-                      vendor[0].price - vendor[0].price * vendor[0].discount
-                    )}
-                  </h3>
-                </div>
+            {product ? (
+              <div className="card-body-price">
+                {product.discount ? (
+                  <div>
+                    <h3
+                      style={{ textDecoration: "line-through", color: "grey" }}
+                    >
+                      {MXN.format(product.price)}
+                    </h3>
+                    <h3 style={{ color: "#1ae817" }}>
+                      {MXN.format(
+                        product.price - product.price * product.discount
+                      )}
+                    </h3>
+                  </div>
+                ) : (
+                  <div>
+                    <h3 style={{ color: "#1ae817" }}>
+                      {MXN.format(product.price)}
+                    </h3>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <></>
+            )}
+
+            <div className="card-body-score">
+              <p>Calificación:</p>
+
+              {score > 4.5 ? (
+                <BsStarFill style={{ color: "yellow" }} />
+              ) : score < 4.4 && score > 3.3 ? (
+                <BsStarFill style={{ color: "#e0e4e6" }} />
+              ) : score < 3.2 && score > 2.3 ? (
+                <BsStarHalf style={{ color: "#e0e4e6" }} />
+              ) : score > 2.3 ? (
+                <BsStar />
               ) : (
-                <div>
-                  <h3 style={{ color: "#1ae817" }}>
-                    {MXN.format(vendor[0].price)}
-                  </h3>
-                </div>
+                <p>N/A</p>
               )}
+              <p>{`${score}`}</p>
             </div>
           </div>
         </div>
-
-        <div></div>
       </div>
     </div>
   );

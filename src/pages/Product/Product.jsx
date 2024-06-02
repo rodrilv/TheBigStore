@@ -16,8 +16,13 @@ import { MdOutlineDiscFull } from "react-icons/md";
 import { LuDisc } from "react-icons/lu";
 import { IoShieldCheckmark } from "react-icons/io5";
 import Logo from "../../assets/profile_example.webp";
+import { useParams } from "react-router-dom";
 
 const Product = () => {
+  const { videogame } = useSelector((state) => state.videogames);
+
+  const params = useParams();
+
   const scrollPageTop = (top = 0) => {
     window.scrollTo({
       top,

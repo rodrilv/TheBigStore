@@ -1,17 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [];
+const initialState = {
+  recent: [],
+  highScore: [],
+  videogame: {}
+};
 
 export const videogamesSlice = createSlice({
-  name: "videogame",
+  name: "videogames",
   initialState,
   reducers: {
-    setVideogames: (state, action) => {
-      state = action.payload;
+    setRecent: (state, action) => {
+      state.recent = action.payload;
     },
+
+    setHighScore: (state, action) => {
+      state.highScore = action.payload;
+    },
+
+    setVideogame: (state, action) => {
+      state.videogame = action.payload;
+    }
   },
 });
 
-export const { setVideogames } = videogamesSlice.actions;
+export const { setRecent, setHighScore, setVideogame } = videogamesSlice.actions;
 
 export default videogamesSlice.reducer;
