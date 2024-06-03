@@ -5,6 +5,7 @@ import { SiPlaystation, SiXbox } from "react-icons/si";
 import { BsStar, BsStarHalf, BsStarFill } from "react-icons/bs";
 import { MXN } from "../../helpers";
 import "./Card.scss";
+import "animate.css";
 
 export default function Card({ _id, title, platform, product, image, score }) {
   const navigate = useNavigate();
@@ -19,8 +20,10 @@ export default function Card({ _id, title, platform, product, image, score }) {
       ) : null}
 
       <div
-        className="card"
-        style={{ opacity: product ? 1 : 0.5 }}
+        className={`animate__animated animate__fadeInLeft animate__faster card`}
+        style={{
+          opacity: product ? 1 : 0.5,
+        }}
         onClick={async () => {
           if (product) {
             if (!loading) {

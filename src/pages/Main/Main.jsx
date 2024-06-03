@@ -11,6 +11,14 @@ export default function Main() {
 
   const dispatch = useDispatch();
 
+  const verifyStore = () => {
+    if (recent.length > 1 && highScore.length > 1) {
+      return true;
+    }
+
+    return false;
+  };
+
   const getRecent = async () => {
     return await getRecentVideogames();
   };
@@ -20,12 +28,14 @@ export default function Main() {
   };
 
   useEffect(() => {
-    getRecent().then((videogames) => {
-      dispatch(setRecent(videogames));
-    });
-    getHighScore().then((videogames) => {
-      dispatch(setHighScore(videogames));
-    });
+    if (!verifyStore()) {
+      getRecent().then((videogames) => {
+        dispatch(setRecent(videogames));
+      });
+      getHighScore().then((videogames) => {
+        dispatch(setHighScore(videogames));
+      });
+    }
   }, []);
 
   return (

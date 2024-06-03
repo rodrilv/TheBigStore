@@ -1,8 +1,8 @@
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Navbar, SponsoredProduct } from "../../components";
 import { videogames } from "../../helpers/static";
 import { MXN } from "../../helpers";
-import "./Product.scss";
 import { SiXbox } from "react-icons/si";
 import { SiPlaystation } from "react-icons/si";
 import {
@@ -16,8 +16,8 @@ import { MdOutlineDiscFull } from "react-icons/md";
 import { LuDisc } from "react-icons/lu";
 import { IoShieldCheckmark } from "react-icons/io5";
 import Logo from "../../assets/profile_example.webp";
-import { useParams } from "react-router-dom";
-
+import "./Product.scss";
+import { useSelector } from "react-redux";
 const Product = () => {
   const { videogame } = useSelector((state) => state.videogames);
 
