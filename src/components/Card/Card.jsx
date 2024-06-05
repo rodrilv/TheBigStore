@@ -29,7 +29,9 @@ export default function Card({ _id, title, platform, product, image, score }) {
             if (!loading) {
               setLoading(true);
               navigate(`/product/${_id}`);
-              setLoading(false);
+              setTimeout(() => {
+                setLoading(false);
+              }, 3000);
               return;
             }
           }
@@ -66,20 +68,22 @@ export default function Card({ _id, title, platform, product, image, score }) {
             <div className="card-body-state">
               {product ? (
                 <>
-                  {product.state === "Usado" ? (
-                    <div>
-                      <p>{product.state}</p>
-                    </div>
-                  ) : product.state === "Buen estado" ? (
-                    <div>
-                      <p>{product.state}</p>
-                    </div>
-                  ) : product.state === "Excelente estado" ? (
+                  {product.condition && product.protected === "Usado" ? (
                     <div>
                       <TbDiscountCheck />
                       <p>Garantizado</p>
                     </div>
-                  ) : product.state === "Nuevo" ? (
+                  ) : product.condition === "Buen estado" ? (
+                    <div style={{ color: "#04abf8" }}>
+                      <TbDiscountCheck style={{ color: "#04abf8" }} />
+                      <p>{product.condition}</p>
+                    </div>
+                  ) : product.condition === "Excelente estado" ? (
+                    <div style={{ color: "#04abf8" }}>
+                      <TbDiscountCheck style={{ color: "#04abf8" }} />
+                      <p>{product.condition}</p>
+                    </div>
+                  ) : product.condition === "Nuevo" ? (
                     <div style={{ color: "yellow" }}>
                       <TbDiscountCheck style={{ color: "yellow" }} />
                       <p>Nuevo</p>

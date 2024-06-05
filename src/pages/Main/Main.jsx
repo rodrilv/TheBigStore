@@ -40,40 +40,38 @@ export default function Main() {
 
   return (
     <div className="main">
-      <div>
-        <div className="main-section">
-          <h2>Lo más reciente</h2>
-        </div>
-
-        <div className="main-grid">
-          {recent[0] ? (
-            recent.map((game, index) => {
-              return <Card key={index} {...game} />;
-            })
-          ) : (
-            <div className="card-loader-container">
-              <span className="card-loader"></span>
-            </div>
-          )}
-        </div>
-
-        <div className="main-section">
-          <h2>Aclamados por la crítica</h2>
-        </div>
-
-        <div className="main-grid">
-          {highScore[0] ? (
-            highScore.map((game, index) => {
-              return <Card key={index} {...game} />;
-            })
-          ) : (
-            <div className="card-loader-container">
-              <span className="card-loader"></span>
-            </div>
-          )}
-        </div>
+      <div className="main-title">
+        <h2>Lo más reciente</h2>
       </div>
-      <div></div>
+      <div className="main-section">
+        {recent[0] ? (
+          recent.map((game, index) => {
+            return <Card key={index} {...game} />;
+          })
+        ) : (
+          <div className="card-loader-container">
+            <span className="card-loader"></span>
+          </div>
+        )}
+      </div>
+
+      <div className="main-title">
+        <h2>Aclamados por la crítica</h2>
+      </div>
+      <div className="main-section">
+        {highScore[0] ? (
+          highScore.map((game, index) => {
+            return <Card key={index} {...game} />;
+          })
+        ) : (
+          <div className="card-loader-container">
+            <span className="card-loader"></span>
+          </div>
+        )}
+      </div>
+      <div className="main-title">
+        <h2>Usados... ¡Pero garantizados!</h2>
+      </div>
     </div>
   );
 }

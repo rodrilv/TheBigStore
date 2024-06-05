@@ -1,52 +1,44 @@
-.main-grid {
-  background-color: #142147;
-  padding: 11%;
-  display: grid;
-  grid-template-columns: 25% 25% 27% 10%;
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 }
 
 .main-section {
-  h2 {
-    font-size: 28px;
-    width: 79vw;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    color: white;
-    position: relative;
-    top: 100px;
-    left: 11%;
-  }
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px;
 }
 
-.section-1 {
-}
-
-.section-2 {
+.main-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
 }
 
 @media screen and (max-width: 1400px) {
+  .main-section {
+    grid-template-columns: 300px 300px 300px;
+  }
+}
+
+@media screen and (max-width: 980px) {
   .main {
-    h2 {
-      top: 10px;
-      left: 5%;
-    }
+    margin-top: 0px;
+  }
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
   }
 
-  .main-grid {
-    padding: 20px;
-  }
-}
-
-@media screen and (max-width: 1115px) {
-  .main-grid {
-    grid-template-columns: 33% 33% 33%;
-  }
-}
-
-@media screen and (max-width: 866px) {
-  .main-grid {
-    padding: 0%;
-    margin-right: 100%;
-    grid-template-columns: 100%;
+  .main-title {
+    margin: 20px;
   }
 }
