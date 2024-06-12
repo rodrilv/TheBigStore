@@ -1,8 +1,20 @@
 import { useState } from "react";
 import { TbDiscountCheck } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
-import { SiPlaystation, SiXbox } from "react-icons/si";
-import { BsStar, BsStarHalf, BsStarFill } from "react-icons/bs";
+import {
+  SiNintendo,
+  SiNintendogamecube,
+  SiPlaystation,
+  SiWii,
+  SiWiiu,
+  SiXbox,
+} from "react-icons/si";
+import {
+  BsStar,
+  BsStarHalf,
+  BsStarFill,
+  BsNintendoSwitch,
+} from "react-icons/bs";
 import { MXN } from "../../helpers";
 import "./Card.scss";
 import "animate.css";
@@ -58,6 +70,36 @@ export default function Card({ _id, title, platform, product, image, score }) {
               ) : platform.includes("Xbox") ? (
                 <div>
                   <SiXbox />
+                  <p>{platform}</p>
+                </div>
+              ) : platform === "Wii" ? (
+                <div>
+                  <SiWii />
+                  <p>{platform}</p>
+                </div>
+              ) : platform === "Wii U" ? (
+                <div>
+                  <SiWiiu />
+                  <p>{platform}</p>
+                </div>
+              ) : platform === "Gamecube" ? (
+                <div>
+                  <SiNintendogamecube />
+                  <p>{platform}</p>
+                </div>
+              ) : platform === "Nintendo Switch" ? (
+                <div>
+                  <BsNintendoSwitch />
+                  <p>{platform}</p>
+                </div>
+              ) : platform.includes("Gameboy") ? (
+                <div>
+                  <SiNintendo />
+                  <p>{platform}</p>
+                </div>
+              ) : platform.includes("NES") ? (
+                <div>
+                  <SiNintendo />
                   <p>{platform}</p>
                 </div>
               ) : (
