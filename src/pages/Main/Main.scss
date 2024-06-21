@@ -10,6 +10,13 @@
   justify-content: center;
   gap: 30px;
   margin: 60px;
+  min-height: 1050px;
+}
+
+.main-loader {
+  position: relative;
+  left: 27vw;
+  bottom: 90px;
 }
 
 .main-title {
