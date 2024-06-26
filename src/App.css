@@ -40,13 +40,13 @@ button {
   outline: none;
   border: none;
   color: white;
-  background-color: #324377;
+  background-color: #1754aa;
   cursor: pointer;
   transition: 0.4s;
 }
 
 button:hover {
-  background-color: #142147;
+  background-color: #264b80;
   transition: 0.4s;
 }
 
